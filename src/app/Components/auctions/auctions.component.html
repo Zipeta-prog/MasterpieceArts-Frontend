@@ -1,0 +1,87 @@
+<div class="app-container">
+  <app-navigation></app-navigation>
+  <div class="auction-content">
+
+    <!-- Header Section -->
+    <header class="auction-header">
+      <div class="header-left">
+        <h1 class="header-title">Auction</h1>
+        <div class="search-bar">
+          <!-- Add your search bar HTML here -->
+          <input type="text" placeholder="Search...">
+          <button>Search</button>
+        </div>
+      </div>
+
+      <div class="header-right">
+        <div class="user-profile">
+          <!-- Add your user profile icon and dropdown HTML here -->
+          <button class="dropbtn">My Account</button>
+          <div class="dropdown-content">
+            <a href="#">Profile</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Auctions Main Section -->
+    <main class="auctions-main">
+      <!-- Category Sidebar -->
+      <div class="sidebar">
+        <h3>Categories</h3>
+
+        <!-- Dropdown for Artist Name -->
+        <div class="dropdown-category">
+          <button class="dropdown-option">Artist Name</button>
+          <div class="dropdown-container">
+            <a href="#">Artist 1</a>
+            <a href="#">Artist 2</a>
+            <!-- Add more artist options as needed -->
+          </div>
+        </div>
+
+        <!-- Dropdown for Price Range -->
+        <div class="dropdown-category">
+          <button class="dropdown-option">Price Range</button>
+          <div class="dropdown-container">
+            <a href="#">$0 - $100</a>
+            <a href="#">$100 - $500</a>
+            <!-- Add more price range options as needed -->
+          </div>
+        </div>
+
+        <!-- Dropdown for Year -->
+        <div class="dropdown-category">
+          <button class="dropdown-option">Year</button>
+          <div class="dropdown-container">
+            <a href="#">2023</a>
+            <a href="#">2022</a>
+            <!-- Add more year options as needed -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Art Cards Section -->
+<div class="art-cards">
+  <!-- Auction Art Cards go here -->
+  <div class="art-card" *ngFor="let auction of auctions">
+    <img src="{{ auction.imagePath }}" alt="{{ auction.name }}" width="200px" height="100px">
+    <h4>{{ auction.name }}</h4>
+    <p>Year: {{ auction.year }}</p>
+    <p>Remaining Time: {{ remainingTime | async }}</p>
+    <p>End Time: {{ formatDateWithTimeZone(auction.endTime) }}</p>
+    <button routerLink="/bidding-details">More Details</button>
+  </div>
+</div>
+    </main>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button *ngFor="let page of pages" (click)="setCurrentPage(page)">{{ page }}</button>
+    </div>
+
+  </div>
+  <app-footer></app-footer>
+</div>

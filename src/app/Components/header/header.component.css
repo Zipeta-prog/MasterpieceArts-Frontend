@@ -1,0 +1,19 @@
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  margin: 30px 15px;
+  background-color: #f4f4f4;
+  top: 2rem;
+}
+
+.header-text {
+  max-width: 500px;
+}
+
+.header-image {
+  max-width: 500px;
+  height: auto;
+}

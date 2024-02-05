@@ -1,0 +1,32 @@
+/* Gallery Component styles */
+.art-gallery {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.art-carousel {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+.art-piece {
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.art-piece:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery-details {
+  margin-top: 10px;
+}

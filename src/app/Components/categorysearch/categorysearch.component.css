@@ -1,0 +1,14 @@
+/* Search Section styles */
+.search-section {
+  padding: 20px;
+  background-color: #e5e5e5;
+}
+
+.category-button, .search-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}

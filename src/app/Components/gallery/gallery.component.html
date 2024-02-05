@@ -1,0 +1,12 @@
+<div class="art-gallery">
+  <h2>Best Sellers</h2>
+  <div class="art-carousel" [style.transform]="'translateX(' + currentIndex * -100 + '%)'">
+    <div class="art-piece" *ngFor="let gallery of galleries; let i = index">
+      <img src="{{gallery.imagePath}}" alt="{{gallery.name}}" class="gallery-image">
+      <div class="gallery-details">
+        <h3>{{gallery.name}}</h3>
+        <!-- Add additional details if needed -->
+      </div>
+    </div>
+  </div>
+</div>
