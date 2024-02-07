@@ -14,6 +14,11 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { BidderDashboardComponent } from './Components/bidder-dashboard/bidder-dashboard.component';
 import { SellerDashboardComponent } from './Components/seller-dashboard/seller-dashboard.component';
 import { AdminDashboardComponent } from './Components/admin-dashboard/admin-dashboard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BidsManagementComponent } from './Components/bids-management/bids-management.component';
+import { UserManagementComponent } from './Components/user-management/user-management.component';
+import { ProductManagementComponent } from './Components/product-management/product-management.component';
+import { EmailManagementComponent } from './Components/email-management/email-management.component';
 
 export const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -31,5 +36,9 @@ export const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   {path: 'bidder-dashboard', component: BidderDashboardComponent},
   {path:'seller-dashboard', component: SellerDashboardComponent},
-  {path:'admin-dashboard', component: AdminDashboardComponent}
+  {path:'admin-dashboard', component: AdminDashboardComponent},
+  {path:'bids-management', component: BidsManagementComponent},
+  {path:'user-management', component: UserManagementComponent},
+  {path:'product-management', component: ProductManagementComponent},
+  {path:'email-management', component: EmailManagementComponent}
 ];

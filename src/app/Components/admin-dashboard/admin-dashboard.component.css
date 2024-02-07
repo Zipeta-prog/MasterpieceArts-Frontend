@@ -1,0 +1,92 @@
+/* Admin Page Styles */
+.admin-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+}
+
+/* Header Styles */
+.admin-header {
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.my-account-btn {
+  background-color: #1d00ad;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.my-account-btn:hover {
+  background-color: #1a008f;
+}
+
+.header-title {
+  margin: 0;
+}
+
+/* Main Content Styles */
+.admin-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  width: 200px;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-sidebar li {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.admin-sidebar li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Content Area Styles */
+.admin-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.info-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .admin-content {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}

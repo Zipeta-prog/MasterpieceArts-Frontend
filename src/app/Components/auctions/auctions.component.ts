@@ -25,7 +25,7 @@ export class AuctionsComponent implements OnInit {
 formatDateWithTimeZone(arg0: Date) {
 throw new Error('Method not implemented.');
 }
-  remainingTime: Observable<any> | undefined;
+remainingTimes: Observable<string>[] = [];
 
   constructor(private ngZone: NgZone) {}
 
@@ -41,18 +41,34 @@ throw new Error('Method not implemented.');
   currentPage: number = 1;
   pages: number[] = [];
 
-  get artsToShow(): Auction[] {
-    const startIndex = (this.currentPage - 1) * this.artsPerPage;
-    const endIndex = startIndex + this.artsPerPage;
-    return this.auctions.slice(startIndex, endIndex);
+  // ... (existing code)
+
+get artsToShow(): Auction[] {
+  const startIndex = (this.currentPage - 1) * this.artsPerPage;
+  const endIndex = Math.min(startIndex + this.artsPerPage, this.auctions.length);
+  const displayedArts: Auction[] = [];
+
+  for (let i = startIndex; i < endIndex; i++) {
+    displayedArts.push(this.auctions[i]);
   }
+
+  return displayedArts;
+}
+
+// ... (existing code)
+
 
   ngOnInit(): void {
     this.calculatePages();
+    this.calculateRemainingTimes();
+  }
+
+  calculateRemainingTimes(): void {
+    this.remainingTimes = this.auctions.map(auction => this.calculateRemainingTime(auction.endTime));
   }
 
   calculatePages(): void {
-    const pageCount = Math.ceil(this.artsToShow.length / this.artsPerPage);
+    const pageCount = Math.ceil(this.auctions.length / this.artsPerPage);
     this.pages = Array.from({ length: pageCount }, (_, i) => i + 1);
   }
 

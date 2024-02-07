@@ -9,10 +9,11 @@ import { AuctionsComponent } from './Components/auctions/auctions.component';
 import { GalleryComponent } from './Components/gallery/gallery.component';
 import { FooterComponent } from './Components/footer/footer.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgbModule, NavigationComponent, HeaderComponent, CategorysearchComponent, AuctionsComponent, GalleryComponent, FooterComponent],
+  imports: [RouterOutlet, NgbModule, NavigationComponent, HeaderComponent, CategorysearchComponent, AuctionsComponent, GalleryComponent, FooterComponent, NgbModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

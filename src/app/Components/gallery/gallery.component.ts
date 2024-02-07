@@ -24,17 +24,15 @@ export class GalleryComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.galleries = [
-      { name: 'Artwork 1', imagePath: 'https://pixabay.com/photos/hydrangeas-wilted-flower-dry-flora-8519528/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
-      { name: 'Artwork 1', imagePath: 'https://pixabay.com/photos/hydrangeas-wilted-flower-dry-flora-8519528/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
-      { name: 'Artwork 1', imagePath: 'https://pixabay.com/photos/hydrangeas-wilted-flower-dry-flora-8519528/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
-      { name: 'Artwork 1', imagePath: 'https://pixabay.com/photos/hydrangeas-wilted-flower-dry-flora-8519528/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
-      { name: 'Artwork 1', imagePath: 'https://pixabay.com/photos/hydrangeas-wilted-flower-dry-flora-8519528/' },
-      { name: 'Artwork 2', imagePath: 'https://pixabay.com/photos/dare-bentley-antique-car-automobile-7923106/' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
+      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
+      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
+      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
 
       // Add more artworks as needed
     ];
@@ -47,6 +45,6 @@ export class GalleryComponent implements OnInit, OnDestroy {
   }
 
   moveCarousel(): void {
-    this.currentIndex = (this.currentIndex + 1) % this.galleries.length;
+    this.currentIndex = (this.currentIndex + 3) % this.galleries.length;
   }
 }

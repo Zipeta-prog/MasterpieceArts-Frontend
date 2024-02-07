@@ -1,1 +1,56 @@
-<p>admin-dashboard works!</p>
+<div class="admin-page">
+  <!-- Header Section -->
+  <header class="admin-header">
+    <h1 class="header-title">Admin Dashboard</h1>
+    <div class="header-left">
+      <button class="my-account-btn">My Account</button>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <div class="admin-content">
+    <!-- Sidebar Section -->
+    <aside class="admin-sidebar">
+      <ul>
+      <li (click)="toggleMenu('userManagement')">User Management</li>
+    <li (click)="toggleMenu('productManagement')">Product Management</li>
+    <li (click)="toggleMenu('emailManagement')">Email Management</li>
+    <li (click)="toggleMenu('bidsManagement')">Bids Management</li>
+      </ul>
+    </aside>
+
+    <!-- Content Area Section -->
+    <main class="admin-main">
+      <div class="info-container">
+        <!-- Display content based on selected link -->
+        <div *ngIf="selectedLink === 'userManagement'">
+          <!-- Content for User Management -->
+          <h2>User Management</h2>
+          <app-user-management></app-user-management>
+          <!-- Add your user management content here -->
+        </div>
+
+        <div *ngIf="selectedLink === 'productManagement'">
+          <app-product-management></app-product-management>
+          <!-- Content for Product Management -->
+          <h2>Product Management</h2>
+          <!-- Add your product management content here -->
+        </div>
+
+        <div *ngIf="selectedLink === 'emailManagement'">
+          <app-email-management></app-email-management>
+          <!-- Content for Email Management -->
+          <h2>Email Management</h2>
+          <!-- Add your email management content here -->
+        </div>
+
+        <div *ngIf="selectedLink === 'bidsManagement'">
+          <app-bids-management></app-bids-management>
+          <!-- Content for Bids Management -->
+          <h2>Bids Management</h2>
+          <!-- Add your bids management content here -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

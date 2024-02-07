@@ -1,0 +1,58 @@
+/* User Management Styles */
+.user-management {
+  display: flex;
+  flex-direction: column !important;
+  gap: 2rem; /* Added gap between tables and sidebar */
+  background-color: red;
+  width: 100%;
+}
+
+/* Sellers Table Styles */
+.sellers-table {
+  width: 100%; /* Full width */
+}
+
+/* Bidders Table Styles */
+.bidders-table {
+  width: 100%; /* Full width */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .user-management {
+    flex-direction: row; /* Display tables side by side on larger screens */
+  }
+
+  .sellers-table,
+  .bidders-table {
+    width: calc(50% - 1rem); /* 50% width with 1rem gap between tables */
+  }
+}
+/* User Management Styles */
+.user-management {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Added gap between tables and sidebar */
+}
+
+/* Sellers Table Styles */
+.sellers-table {
+  width: 100%; /* Full width */
+}
+
+/* Bidders Table Styles */
+.bidders-table {
+  width: 100%; /* Full width */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .user-management {
+    flex-direction: row; /* Display tables side by side on larger screens */
+  }
+
+  .sellers-table,
+  .bidders-table {
+    width: calc(50% - 1rem); /* 50% width with 1rem gap between tables */
+  }
+}

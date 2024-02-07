@@ -63,18 +63,90 @@
         </div>
       </div>
 
+      <section class="art-listings">
+        <div class="art-card">
+            <!-- add your image url here -->
+            <img src="../assets/Images/bentley.jpg" alt="Artwork 1" width="500px" height="200px">
+            <h2>Artwork - 01</h2>
+            <p>Artist: Kumar </p>
+            <p>
+                Description: Description of
+                the artwork goes here.
+            </p>
+            <p>Current Bid: $500</p>
+            <button routerLink="/bidding-details">Place Bid</button>
+        </div>
+        <div class="art-card">
+            <!-- add your image url here -->
+            <img src="../assets/Images/gallery.jpg" alt="Artwork 2" width="500px" height="200px">
+            <h2>Artwork - 02</h2>
+            <p>Artist: Raj 2</p>
+            <p>
+                Description: Description of
+                the artwork goes here.
+            </p>
+            <p>Current Bid: $700</p>
+            <button routerLink="/bidding-details">Place Bid</button>
+        </div>
+        <div class="art-card">
+            <!-- add your image url here -->
+            <img src="../assets/Images/hydrangeas.jpg" alt="Artwork 2" width="500px" height="200px">
+            <h2>Artwork - 02</h2>
+            <p>Artist: Raj 2</p>
+            <p>
+                Description: Description of
+                the artwork goes here.
+            </p>
+            <p>Current Bid: $700</p>
+            <button routerLink="/bidding-details">Place Bid</button>
+        </div>
+        <div class="art-card">
+            <!-- add your image url here -->
+            <img src="../assets/Images/bentley.jpg" alt="Artwork 2" width="500px" height="200px">
+            <h2>Artwork - 02</h2>
+            <p>Artist: Raj 2</p>
+            <p>
+                Description: Description of
+                the artwork goes here.
+            </p>
+            <p>Current Bid: $700</p>
+            <button routerLink="/bidding-details">Place Bid</button>
+        </div>
+    </section>
+
+            <!-- Art Cards Section -->
       <!-- Art Cards Section -->
-<div class="art-cards">
-  <!-- Auction Art Cards go here -->
-  <div class="art-card" *ngFor="let auction of auctions">
-    <img src="{{auction.imagePath}}" alt="{{ auction.name }}" width="200px" height="100px">
-    <h4>{{ auction.name }}</h4>
-    <p>Year: {{ auction.year }}</p>
-    <p>Remaining Time: {{ remainingTime | async }}</p>
-    <p>End Time: {{ formatDateWithTimeZone(auction.endTime) }}</p>
-    <button routerLink="/bidding-details">More Details</button>
-  </div>
-</div>
+      <!--<div class="row art-cards">
+        <div class="col-md-4" *ngFor="let auction of artsToShow;let i = index;">
+          <div class="card mb-4">
+            <img class="card-img-top" src="{{ auction.imagePath }}" alt="{{ auction.name }}" width="150" height="100">
+            <div class="card-body">
+              <h4 class="card-title">{{ auction.name }}</h4>
+              <p class="card-text">Year: {{ auction.year }}</p>
+              <p class="card-text">Remaining Time: {{ remainingTimes[i] | async }}</p>
+              <p class="card-text">End Time: {{ formatDateWithTimeZone(auction.endTime) }}</p>
+              <a href="#" class="btn btn-primary" routerLink="/bidding-details">More Details</a>
+            </div>
+          </div>
+        </div>
+      </div>-->
+       <!--<div class="art-cards">
+
+        <div class="art-card" *ngFor="let auction of auctions">
+          <img src="{{ auction.imagePath }}" alt="{{ auction.name }}">
+          <h4>{{ auction.name }}</h4>
+          <p>Year: {{ auction.year }}</p>
+          <p>Bidding Starting Price: ${{ auction.startingPrice }}</p>
+          <button>More Details</button>
+        </div>
+      </div>-->
+
+      <!-- Pagination -->
+      <!--<div class="pagination">
+        <button *ngFor="let page of pages" (click)="setCurrentPage(page)">{{ page }}</button>
+      </div>-->
+
+
     </main>
 
     <!-- Pagination -->
