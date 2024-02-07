@@ -14,6 +14,13 @@ import { EmailManagementComponent } from '../email-management/email-management.c
   styleUrl: './admin-dashboard.component.css'
 })
 export class AdminDashboardComponent {
+  // users: User[] = [];
+  // products: Product[] = [];
+  // categories: Category[] = [];
+  // bids: Bid[] = [];
+
+  // constructor(private adminService: AdminService) {}
+
 showProductManagement() {
 throw new Error('Method not implemented.');
 }

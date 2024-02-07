@@ -40,5 +40,6 @@ export const routes: Routes = [
   {path:'bids-management', component: BidsManagementComponent},
   {path:'user-management', component: UserManagementComponent},
   {path:'product-management', component: ProductManagementComponent},
-  {path:'email-management', component: EmailManagementComponent}
+  {path:'email-management', component: EmailManagementComponent},
+  {path:'bidding-details', component: BiddingDetailsComponent}
 ];

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { FooterComponent } from '../footer/footer.component';
 import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 interface Auction {
   name: string;
@@ -22,6 +23,16 @@ interface Auction {
   standalone: true,
 })
 export class AuctionsComponent implements OnInit {
+
+  //  // Replace with your API endpoint
+
+
+
+
+
+
+
+
 formatDateWithTimeZone(arg0: Date) {
 throw new Error('Method not implemented.');
 }
@@ -36,6 +47,9 @@ remainingTimes: Observable<string>[] = [];
     { name: 'Artwork 4', imagePath: '../assets/Images/Rectangle.png', year: 2023, startingPrice: 150, endTime: new Date('2024-05-10T12:00:00Z') },
 
   ];
+  // getAuctions(): Observable<Auction[]> {
+  //   return this.http.get<Auction[]>(this.apiUrl);
+  // }
 
   artsPerPage: number = 4;
   currentPage: number = 1;
