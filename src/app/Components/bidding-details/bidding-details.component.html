@@ -1,1 +1,33 @@
-<p>bidding-details works!</p>
+<!-- bidding-details.component.html -->
+
+<div class="bidding-details-container">
+  <h2>Bidding Details</h2>
+
+  <div class="art-piece-details">
+    <img src="{{ artPiece.imagePath }}" alt="{{ artPiece.name }}" class="art-image">
+
+    <div class="details-text">
+      <p><strong>{{ artPiece.name }}</strong></p>
+      <p>{{ artPiece.year }}th January - 14th February 2024</p>
+    </div>
+  </div>
+
+  <div class="about-art-piece">
+    <h3>About the Art Piece</h3>
+    <p>Lorem ipsum dolor sit amet consectetur. Ornare ornare aliquet a consequat nulla consectetur.</p>
+  </div>
+
+  <div class="bid-details-box">
+    <p>Art Piece Name: {{ artPiece.name }}</p>
+    <p>Year: {{ artPiece.year }}</p>
+    <p>Starting Bid Price: ${{ artPiece.startingBidPrice }}</p>
+    <p>Estimate Bid Price: ${{ artPiece.estimateBidPrice }}</p>
+
+    <!-- Add a button with a dropdown icon for bidding -->
+    <button class="place-bid-button" (click)="placeBid()">
+      Place Bid
+      <!-- You can replace the text content with your dropdown icon or any other UI element -->
+      <span class="dropdown-icon">&#9660;</span>
+    </button>
+  </div>
+</div>

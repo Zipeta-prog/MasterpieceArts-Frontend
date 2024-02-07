@@ -1,0 +1,47 @@
+/* bidding-details.component.css */
+
+.bidding-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.art-piece-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.art-image {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+.details-text {
+  flex-grow: 1;
+}
+
+.about-art-piece {
+  margin-bottom: 20px;
+}
+
+.bid-details-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.place-bid-button {
+  background-color: #1d00ad;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.place-bid-button:hover {
+  background-color: #160084;
+}

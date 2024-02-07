@@ -67,7 +67,7 @@
 <div class="art-cards">
   <!-- Auction Art Cards go here -->
   <div class="art-card" *ngFor="let auction of auctions">
-    <img src="{{ auction.imagePath }}" alt="{{ auction.name }}" width="200px" height="100px">
+    <img src="{{auction.imagePath}}" alt="{{ auction.name }}" width="200px" height="100px">
     <h4>{{ auction.name }}</h4>
     <p>Year: {{ auction.year }}</p>
     <p>Remaining Time: {{ remainingTime | async }}</p>

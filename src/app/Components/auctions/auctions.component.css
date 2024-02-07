@@ -1,98 +1,4 @@
 /* Auctions Component styles */
-.auctions-main {
-  display: flex;
-  margin: 25px 14px;
-}
-
-.sidebar {
-  width: 10%;
-  padding: 20px;
-  background-color: #eee;
-  gap: 2rem;
-}
-
-/* Updated styling for the dropdowns */
-.sidebar a, .dropdown-option {
-  padding: 10px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #333;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-/* On mouse-over */
-.sidebar a:hover, .dropdown-option:hover {
-  color: #1d00ad;
-}
-
-/* Dropdown container (hidden by default) */
-.dropdown-container {
-  display: none;
-  padding-left: 8px;
-}
-
-/* Show the dropdown container when the dropdown option is clicked */
-.dropdown-option.active + .dropdown-container {
-  display: block;
-}
-
-/* Optional: Style the caret down icon */
-.dropdown-option:after {
-  content: '\25BC';
-  float: right;
-  padding-right: 8px;
-}
-
-.art-cards {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  margin: 20px 25px;
-  align-items: center;
-  width: 70%;
-}
-
-.art-card {
-  width: 20%; /* Adjust width based on your design */
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  box-sizing: border-box; /* Add box-sizing property */
-}
-
-.art-card:hover {
-  transform: scale(1.05);
-}
-
-/* Pagination styles */
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.pagination button:hover {
-  background-color: #555;
-}
-
-/* Auction Header styles */
 .auction-header {
   display: flex;
   justify-content: space-between;
@@ -161,4 +67,99 @@
 
 .user-profile:hover .dropbtn {
   background-color: #1d00ad;
+}
+
+.auctions-main {
+  display: flex;
+  margin: 25px 14px;
+}
+
+.sidebar {
+  width: 10%;
+  padding: 20px;
+  background-color: #eee;
+  gap: 2rem;
+}
+
+/* Updated styling for the dropdowns */
+.sidebar a,
+.dropdown-option {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidebar a:hover,
+.dropdown-option:hover {
+  color: #1d00ad;
+}
+
+/* Dropdown container (hidden by default) */
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+
+/* Show the dropdown container when the dropdown option is clicked */
+.dropdown-option.active + .dropdown-container {
+  display: block;
+}
+
+/* Optional: Style the caret down icon */
+.dropdown-option:after {
+  content: '\25BC';
+  float: right;
+  padding-right: 8px;
+}
+
+.art-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 20px 25px;
+  align-items: center;
+  width: 70%;
+}
+
+.art-card {
+  width: 20%; /* Adjust width based on your design */
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box; /* Add box-sizing property */
+}
+
+.art-card:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #555;
 }

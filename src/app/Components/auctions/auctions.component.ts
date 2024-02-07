@@ -1,42 +1,43 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgZone } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NavigationComponent } from "../navigation/navigation.component";
-import { FooterComponent } from "../footer/footer.component";
+import { NavigationComponent } from '../navigation/navigation.component';
+import { FooterComponent } from '../footer/footer.component';
 import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 interface Auction {
   name: string;
   imagePath: string;
   year: number;
   startingPrice: number;
-  endTime: Date
+  endTime: Date;
 }
 
 @Component({
-    selector: 'app-auctions',
-    standalone: true,
-    templateUrl: './auctions.component.html',
-    styleUrls: ['./auctions.component.css'],
-    imports: [CommonModule, RouterModule, NavigationComponent, FooterComponent]
+  selector: 'app-auctions',
+  templateUrl: './auctions.component.html',
+  styleUrls: ['./auctions.component.css'],
+  imports: [CommonModule, RouterModule, NavigationComponent, FooterComponent],
+  standalone: true,
 })
-export class AuctionsComponent {
+export class AuctionsComponent implements OnInit {
+formatDateWithTimeZone(arg0: Date) {
+throw new Error('Method not implemented.');
+}
+  remainingTime: Observable<any> | undefined;
 
-  remainingTime: Observable<string>;
+  constructor(private ngZone: NgZone) {}
 
-  constructor(private ngZone: NgZone, private datePipe: DatePipe) {}
   auctions: Auction[] = [
     { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg', year: 2023, startingPrice: 100, endTime: new Date('2024-02-10T12:00:00Z') },
     { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg', year: 2023, startingPrice: 150, endTime: new Date('2024-03-10T12:00:00Z') },
     { name: 'Artwork 3', imagePath: '../assets/Images/hydrangeas.jpg', year: 2023, startingPrice: 100, endTime: new Date('2024-04-10T12:00:00Z') },
     { name: 'Artwork 4', imagePath: '../assets/Images/Rectangle.png', year: 2023, startingPrice: 150, endTime: new Date('2024-05-10T12:00:00Z') },
-    // Add more art entries as needed
+
   ];
 
-  artsPerPage: number = 4; // Number of arts to display per page
+  artsPerPage: number = 4;
   currentPage: number = 1;
   pages: number[] = [];
 
@@ -52,7 +53,7 @@ export class AuctionsComponent {
 
   calculatePages(): void {
     const pageCount = Math.ceil(this.artsToShow.length / this.artsPerPage);
-  this.pages = Array.from({ length: pageCount }, (_, i) => i + 1);
+    this.pages = Array.from({ length: pageCount }, (_, i) => i + 1);
   }
 
   setCurrentPage(page: number): void {
@@ -75,9 +76,5 @@ export class AuctionsComponent {
     }
   }
 
-
-  // Create a method to format the date with time zone
-  formatDateWithTimeZone(date: Date): string {
-    return this.datePipe.transform(date, 'medium', 'UTC+0') || ''; // Ensure to return a string
-  }
 }
+
