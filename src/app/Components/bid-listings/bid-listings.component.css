@@ -35,3 +35,12 @@
   /* position: absolute;
   bottom: 2rem; */
 }
+
+
+.table .btn
+{
+  padding: 10px 10px;
+  border: 1px solid black;
+  margin-right: 1rem;
+
+}
