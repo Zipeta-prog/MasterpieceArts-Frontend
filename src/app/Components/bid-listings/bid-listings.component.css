@@ -19,13 +19,30 @@
   position: relative;
   width: 90%;
   margin: auto;
+  cursor: pointer;
 }
+.card_statistics:active
+{
+  transform: scale(.9);
+}
+
+
+
 
 .card_statistics .number
 {
   font-weight: bold;
   font-size: 5rem;
   color: #1d00ad;
+}
+.card_statistics.active_card
+{
+  background-color: #1d00ad;
+  color: #fff;
+}
+.active_card .number
+{
+color: #fff;
 }
 
 .card_statistics .card_label

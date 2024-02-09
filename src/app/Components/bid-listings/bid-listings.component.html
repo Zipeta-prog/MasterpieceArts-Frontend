@@ -1,7 +1,7 @@
 <div class="card_container">
 
-<div class="card_statistics" *ngFor="let card of bidderStatistics">
-  <label for="" class="number">{{card.totals}}</label>
+<div class="card_statistics" [ngClass]="card.label==iscardActive ?'active_card' : ''" *ngFor="let card of bidderStatistics;" (click)="getFilteredBids(card.label)">
+  <label for="" class="number">{{ getStatistics(card.label)}}  </label>
   <label for="" class="card_label">{{card.label}}</label>
 </div>
 
@@ -9,29 +9,20 @@
 
 
 <div class="all_bids">
-<table class="table text-center table-sm table-striped table-bordered">
+<table class="table text-center table-sm table-striped table-bordered mt-5">
 <tr>
   <th>#</th>
   <th>bid_title</th>
   <th>Amount</th>
   <th>Closing date</th>
   <th>Action</th>
-<tr>
-  <tr>
-    <td>2</td>
-    <td>Monalisa</td>
-    <td>USD 2000</td>
-    <td class="">Tue,2-2-2024</td>
-    <td>
-      <button class="btn">Modify</button>
-      <button class="btn">Withdraw</button>
-    </td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Monalisa</td>
-    <td>USD 2000</td>
-    <td class="">Tue,2-2-2024</td>
+</tr>
+
+  <tr *ngFor="let bid of filteredBids">
+    <td>{{bid.Id}}</td>
+    <td>{{bid.title}}</td>
+    <td>{{bid.Amount}}</td>
+    <td class="">{{bid.Date}}</td>
     <td>
       <button class="btn">Modify</button>
       <button class="btn">Withdraw</button>
