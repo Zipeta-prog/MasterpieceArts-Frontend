@@ -1,33 +1,27 @@
-<!-- bidding-details.component.html -->
+<div class="bidding-page">
+  <h2>Bidding Page</h2>
 
-<div class="bidding-details-container">
-  <h2>Bidding Details</h2>
-
-  <div class="art-piece-details">
-    <img src="{{ artPiece.imagePath }}" alt="{{ artPiece.name }}" class="art-image">
-
-    <div class="details-text">
-      <p><strong>{{ artPiece.name }}</strong></p>
-      <p>{{ artPiece.year }}th January - 14th February 2024</p>
+  <div class="bidding-page">
+  <!-- Header Bar -->
+  <header class="header-bar">
+    <div class="header-content">
+      <h2 class="header-title">Bidding Details</h2>
+      <div class="shopping-basket-icon">
+        <mat-icon>shopping_basket</mat-icon>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="about-art-piece">
-    <h3>About the Art Piece</h3>
-    <p>Lorem ipsum dolor sit amet consectetur. Ornare ornare aliquet a consequat nulla consectetur.</p>
-  </div>
-
-  <div class="bid-details-box">
-    <p>Art Piece Name: {{ artPiece.name }}</p>
-    <p>Year: {{ artPiece.year }}</p>
-    <p>Starting Bid Price: ${{ artPiece.startingBidPrice }}</p>
-    <p>Estimate Bid Price: ${{ artPiece.estimateBidPrice }}</p>
-
-    <!-- Add a button with a dropdown icon for bidding -->
-    <button class="place-bid-button" (click)="placeBid()">
-      Place Bid
-      <!-- You can replace the text content with your dropdown icon or any other UI element -->
-      <span class="dropdown-icon">&#9660;</span>
-    </button>
+  <div class="art-cards">
+    <div *ngFor="let item of artItems" class="art-card">
+      <img [src]="item.image" alt="{{ item.name }}" class="card-image">
+      <div class="card-details">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+        <p>Current Bid: ${{ item.currentBid }}</p>
+        <button class="place-bid-btn" (click)="placeBid(item)">Place Bid</button>
+        <button class="increase-bid-btn" (click)="increaseBid(item)">Increase Bid</button>
+      </div>
+    </div>
   </div>
 </div>

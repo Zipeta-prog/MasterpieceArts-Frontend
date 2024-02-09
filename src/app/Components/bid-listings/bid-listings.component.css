@@ -1,0 +1,37 @@
+
+.card_container
+{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  padding: 0 20px;
+}
+.card_statistics
+{
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 1rem;
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.card_statistics .number
+{
+  font-weight: bold;
+  font-size: 5rem;
+  color: #1d00ad;
+}
+
+.card_statistics .card_label
+{
+  font-size: 3rem;
+  font-weight: bold;
+  /* position: absolute;
+  bottom: 2rem; */
+}

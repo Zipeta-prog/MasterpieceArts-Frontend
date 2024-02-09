@@ -1,47 +1,70 @@
-/* bidding-details.component.css */
-
-.bidding-details-container {
-  max-width: 800px;
+.bidding-page {
+  width: 100%;
   margin: 0 auto;
+  padding: 20px;
 }
 
-.art-piece-details {
+.header-bar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.art-image {
-  width: 200px;
-  height: 150px;
-  margin-right: 20px;
-}
-
-.details-text {
+.header-title {
+  margin: 0;
   flex-grow: 1;
 }
 
-.about-art-piece {
-  margin-bottom: 20px;
+.shopping-basket-icon {
+  font-size: 24px;
 }
 
-.bid-details-box {
-  border: 1px solid #ccc;
-  padding: 15px;
+.art-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.place-bid-button {
-  background-color: #1d00ad;
-  color: white;
+.art-card {
+  border: 1px solid #ddd;
   padding: 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 16px;
-  margin-top: 10px;
+  display: flex;
+  gap: 10px;
 }
 
-.place-bid-button:hover {
-  background-color: #160084;
+.card-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
 }
+
+.place-bid-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.place-bid-btn:hover {
+  background-color: #218838;
+}
+
+.increase-bid-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.increase-bid-btn:hover {
+  background-color: #0056b3;
+}
+

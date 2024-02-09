@@ -1,0 +1,33 @@
+<form>
+  <!-- Add image upload control here -->
+  <div class="form-group">
+    <label for="avatar">Avatar:</label>
+    <input type="file" id="avatar" formControlName="avatar">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" required>
+    <div>
+      Name is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" required>
+    <div>
+      Email is required.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" required>
+    <div>
+      Password is required.
+    </div>
+  </div>
+
+  <button type="submit">Save Changes</button>
+</form>

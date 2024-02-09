@@ -1,32 +1,42 @@
+<!-- bidder-dashboard.component.html -->
 <div class="bidder-dashboard">
-  <div class="search-bar">
-    <input type="text" placeholder="Search...">
-    <button (click)="searchItems()">Search</button>
-  </div>
-
-  <div class="item-list">
-    <div class="item" *ngFor="let item of items">
-      <img src="{{ item.imagePath }}" alt="{{ item.name }}">
-      <h3>{{ item.name }}</h3>
-      <p>Current Bid: ${{ item.currentBid }}</p>
-      <button (click)="viewItemDetails(item)">View Details</button>
-      <button (click)="placeBid(item)">Place Bid</button>
+  <!-- Header Section -->
+  <header class="bid-dashboard-header">
+    <h1 class="bid-header-title">Bidder Dashboard</h1>
+    <div class="bid-header-left">
+      <button class="my-bid-account-btn">My Account</button>
     </div>
-  </div>
+  </header>
 
-  <div class="item-list">
-    <div class="item" *ngFor="let item of items">
-      <img src="{{ item.imagePath }}" alt="{{ item.name }}">
-      <h3>{{ item.name }}</h3>
-      <p>Current Bid: ${{ item.currentBid }}</p>
-      <button (click)="viewItemDetails(item)">View Details</button>
-      <button (click)="placeBid(item)">Place Bid</button>
-    </div>
-  </div>
+  <!-- Main Content Section -->
+  <div class="bid-dashboard-content">
+    <!-- Sidebar Section -->
+    <aside class="bid-dashboard-sidebar">
+      <ul>
+        <li (click)="toggleMenu('bidderProfile')">Bidder Profile</li>
+        <li (click)="toggleMenu('bidListings')">Bid Listings</li>
+        <li (click)="toggleMenu('paymentHistory')">Payment History</li>
+      </ul>
+    </aside>
 
-  <div class="buy-package">
-    <h2>Buy Package</h2>
-    <!-- Add Stripe integration here for payment -->
-    <button (click)="buyPackage()">Buy Package (Stripe)</button>
+    <!-- Content Area Section -->
+    <main class="bid-dashboard-main">
+      <div class="bid-info-container">
+        <!-- Display content based on selected link -->
+        <div *ngIf="selectedLink === 'bidderProfile'">
+          <!-- Bidder Profile Component -->
+          <app-bidder-profile></app-bidder-profile>
+        </div>
+        <div *ngIf="selectedLink === 'bidListings'">
+          <!-- Bidder Profile Component -->
+        n
+          <app-bid-listings></app-bid-listings>
+        </div>
+        <div *ngIf="selectedLink === 'paymentHistory'">
+          <!-- Payment History Table Component -->
+          <!-- <app-payment-history></app-payment-history> -->
+        </div>
+      </div>
+    </main>
   </div>
 </div>

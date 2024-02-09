@@ -1,43 +1,92 @@
+/* Admin Page Styles */
 .bidder-dashboard {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 20px;
+  height: 100vh;
+
 }
 
-.search-bar {
-  margin-bottom: 20px;
-}
-
-.item-list {
+/* Header Styles */
+.bid-dashboard-header {
+  background-color: #333;
+  color: white;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-.item {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.bid-header-left {
+  display: flex;
+  align-items: center;
 }
 
-.item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.my-bid-account-btn {
+  background-color: #1d00ad;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
 }
 
-.item-details {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.my-bid-account-btn:hover {
+  background-color: #1a008f;
 }
 
-.buy-package {
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.bid-header-title {
+  margin: 0;
+}
+
+/* Main Content Styles */
+.bid-dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar Styles */
+.bid-dashboard-sidebar {
+  width: 200px;
+  background-color: #eee;
+  padding: 1rem;
+}
+
+.bid-dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bid-dashboard-sidebar li {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bid-dashboard-sidebar li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Content Area Styles */
+.bid-dashboard-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.bid-info-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .bid-dashboard-content {
+    flex-direction: column;
+  }
+
+  .bid-dashboard-sidebar {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }

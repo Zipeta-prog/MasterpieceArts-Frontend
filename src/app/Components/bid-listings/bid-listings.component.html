@@ -1,0 +1,31 @@
+<div class="card_container">
+
+<div class="card_statistics" *ngFor="let card of bidderStatistics">
+  <label for="" class="number">{{card.totals}}</label>
+  <label for="" class="card_label">{{card.label}}</label>
+</div>
+
+</div>
+
+
+<div class="all_bids">
+<table class="table table-sm table-stripped table-bordered">
+<tr>
+  <th>#</th>
+  <th>bid_title</th>
+  <th>Amount</th>
+  <th>Closing date</th>
+  <th>Action</th>
+<tr>
+  <tr>
+    <td>2</td>
+    <td>Monalisa</td>
+    <td>USD 2000</td>
+    <td>Tue,2-2-2024</td>
+    <td>
+      <button>Modify</button>
+      <button>Withdraw</button>
+    </td>
+  </tr>
+</table>
+</div>

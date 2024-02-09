@@ -19,6 +19,8 @@ import { BidsManagementComponent } from './Components/bids-management/bids-manag
 import { UserManagementComponent } from './Components/user-management/user-management.component';
 import { ProductManagementComponent } from './Components/product-management/product-management.component';
 import { EmailManagementComponent } from './Components/email-management/email-management.component';
+import { BidderProfileComponent } from './Components/bidder-profile/bidder-profile.component';
+import { BidListingsComponent } from './Components/bid-listings/bid-listings.component';
 
 export const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -41,5 +43,8 @@ export const routes: Routes = [
   {path:'user-management', component: UserManagementComponent},
   {path:'product-management', component: ProductManagementComponent},
   {path:'email-management', component: EmailManagementComponent},
-  {path:'bidding-details', component: BiddingDetailsComponent}
+  {path:'bidding-details', component: BiddingDetailsComponent},
+  {path:'bidder-dashboard', component:BidderDashboardComponent},
+  {path:'bidder-profile', component:BidderProfileComponent},
+  {path:'bid-listings', component:BidListingsComponent}
 ];

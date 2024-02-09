@@ -3,34 +3,49 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
+import { CartService } from '../../Service/cart.service';
 
-interface ArtPiece {
+
+interface ArtItem {
+  id: number;
   name: string;
-  imagePath: string;
-  year: number;
-  startingBidPrice: number;
-  estimateBidPrice: number;
+  image: string;
+  description: string;
+  currentBid: number;
 }
 
 @Component({
   selector: 'app-bidding-details',
   templateUrl: './bidding-details.component.html',
   styleUrls: ['./bidding-details.component.css'],
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,  MatIconModule],
   standalone: true
 })
 export class BiddingDetailsComponent {
-  artPiece: ArtPiece = {
-    name: 'Masterpiece Sale - Jane Doe',
-    imagePath: '../assets/Images/Rectangle.png',
-    year: 2024,
-    startingBidPrice: 100,
-    estimateBidPrice: 500
-  };
+  artItems: ArtItem[] = [
+    { id: 1, name: 'Artwork 1', image: '../assets/Images/bentley.jpg', description: 'Description 1', currentBid: 100 },
+    { id: 2, name: 'Artwork 2', image: '../assets/Images/gallery.jpg', description: 'Description 2', currentBid: 150 },
+    { id: 3, name: 'Artwork 1', image: '../assets/Images/hydrangeas.jpg', description: 'Description 1', currentBid: 100 },
+    { id: 4, name: 'Artwork 2', image: '../assets/Images/gallery.jpg', description: 'Description 2', currentBid: 150 },
 
-  // Update logic for place bid action
-  placeBid(): void {
-    // Add your updated bidding logic here
-    alert(`You placed a bid for ${this.artPiece.name} at $${this.artPiece.startingBidPrice}.`);
+  ];
+
+  constructor(private snackBar: MatSnackBar, private cartService: CartService) {}
+
+  addToCart(bidding: BiddingDetailsComponent) {
+    this.cartService.addToCart(bidding);
+    window.alert('Your product has been added to the cart!');
+  }
+
+  placeBid(item: ArtItem): void {
+
+    this.snackBar.open(`Bid placed for ${item.name}`, 'Close', { duration: 8000 });
+  }
+
+  increaseBid(item: ArtItem): void {
+
+    this.snackBar.open(`Bid increased for ${item.name}`, 'Close', { duration: 8000 });
   }
 }
