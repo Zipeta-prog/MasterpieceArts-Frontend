@@ -1,3 +1,4 @@
+<app-bid-form></app-bid-form>
 <div class="bidding-page">
   <h2>Bidding Page</h2>
 
@@ -13,7 +14,7 @@
   </header>
 
   <div class="art-cards">
-    <div *ngFor="let item of artItems" class="art-card">
+    <div *ngFor="let item of artItems" class="art-card" >
       <img [src]="item.image" alt="{{ item.name }}" class="card-image">
       <div class="card-details">
         <h3>{{ item.name }}</h3>

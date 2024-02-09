@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { CartService } from '../../Service/cart.service';
+import { BidFormComponent } from "../bid-form/bid-form.component";
 
 
 interface ArtItem {
@@ -17,11 +18,11 @@ interface ArtItem {
 }
 
 @Component({
-  selector: 'app-bidding-details',
-  templateUrl: './bidding-details.component.html',
-  styleUrls: ['./bidding-details.component.css'],
-  imports: [CommonModule, RouterModule,  MatIconModule],
-  standalone: true
+    selector: 'app-bidding-details',
+    templateUrl: './bidding-details.component.html',
+    styleUrls: ['./bidding-details.component.css'],
+    standalone: true,
+    imports: [CommonModule, RouterModule, MatIconModule, BidFormComponent]
 })
 export class BiddingDetailsComponent {
   artItems: ArtItem[] = [
@@ -48,4 +49,6 @@ export class BiddingDetailsComponent {
 
     this.snackBar.open(`Bid increased for ${item.name}`, 'Close', { duration: 8000 });
   }
+
+
 }
