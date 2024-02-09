@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { UserService } from '../../Service/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -10,5 +11,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+  constructor(private userService: UserService) {}
 
 }

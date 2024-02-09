@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { UserManagementComponent } from '../Components/user-management/user-management.component';
+import { ProductManagementComponent } from '../Components/product-management/product-management.component';
+import { BidsManagementComponent } from '../Components/bids-management/bids-management.component';
 
 @Injectable({
   providedIn: 'root'
@@ -11,23 +14,15 @@ export class AdminServiceService {
 
   constructor(private http: HttpClient) {}
 
-  // getUsers(): Observable<User[]> {
-  //   return this.http.get<User[]>(`${this.apiUrl}/users`);
-  // }
+  getUsers(): Observable<UserManagementComponent[]> {
+    return this.http.get<UserManagementComponent[]>(`${this.apiUrl}/users`);
+  }
 
-  // getProducts(): Observable<Product[]> {
-  //   return this.http.get<Product[]>(`${this.apiUrl}/products`);
-  // }
+  getProducts(): Observable<ProductManagementComponent[]> {
+    return this.http.get<ProductManagementComponent[]>(`${this.apiUrl}/products`);
+  }
 
-  // getCategories(): Observable<Category[]> {
-  //   return this.http.get<Category[]>(`${this.apiUrl}/categories`);
-  // }
-
-  // getBids(): Observable<Bid[]> {
-  //   return this.http.get<Bid[]>(`${this.apiUrl}/bids`);
-  // }
-
-  // sendUpdateEmails(): Observable<void> {
-  //   return this.http.post<void>(`${this.apiUrl}/send-emails`, {});
-  // }
+  getBids(): Observable<BidsManagementComponent[]> {
+    return this.http.get<BidsManagementComponent[]>(`${this.apiUrl}/bids`);
+  }
 }
