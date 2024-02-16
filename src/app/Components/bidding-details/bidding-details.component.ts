@@ -32,6 +32,7 @@ export class BiddingDetailsComponent {
     { id: 4, name: 'Artwork 2', image: '../assets/Images/gallery.jpg', description: 'Description 2', currentBid: 150 },
 
   ];
+  item!: ArtItem;
 
   constructor(private snackBar: MatSnackBar, private cartService: CartService) {}
 
