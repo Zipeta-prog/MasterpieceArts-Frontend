@@ -1,3 +1,4 @@
+/* Your existing styles */
 
 .header-section {
   display: flex;
@@ -18,21 +19,3 @@
   height: auto;
 }
 
-.cta-button1,
-    .cta-button2 {
-        gap: 2rem;
-        padding: 10px 20px; /* Adjust padding as needed */
-        border: none;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .cta-button1 {
-        background-color: #3498db; /* Set background color for the first button */
-    }
-
-    .cta-button2 {
-        background-color: #e74c3c; /* Set background color for the second button */
-    }

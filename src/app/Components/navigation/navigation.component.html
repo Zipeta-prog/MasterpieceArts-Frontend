@@ -1,19 +1,24 @@
-<div class="nav-link">
-  <img routerLink="/"
-    src="../../../assets/Images/MLogo.png"
-    alt="masterpiece-logo"
-    style="width: 150px"
-  />
-  <div class="nav">
-    <div class="links">
-      <span routerLink="/">Home</span>
-      <span routerLink="/about">About</span>
-      <span routerLink="/auctions">Auctions</span>
-      <span routerLink="/contacts">Contacts</span>
+<div class="navbar navbar-expand-lg navbar-light bg-white shadow-md">
+  <a class="navbar-brand" routerLink="/">
+    <img src="../../../assets/Images/MLogo.png" alt="masterpiece-logo" style="width: 150px">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="nav mx-auto">
+      <div class="links navbar-nav text-center">
+        <a class="nav-link" routerLink="/">Home</a>
+        <a class="nav-link" routerLink="/about">About</a>
+        <a class="nav-link" routerLink="/auctions">Auctions</a>
+        <a class="nav-link" routerLink="/contacts">Contacts</a>
+      </div>
     </div>
 
-  </div>
-  <div class="right">
-      <button routerLink="/login">Account</button>
+    <div class="right">
+      <a class="btn btn-primary" routerLink="/login">Account</a>
     </div>
+  </div>
 </div>
