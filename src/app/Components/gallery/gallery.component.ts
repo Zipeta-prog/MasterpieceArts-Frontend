@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 interface Gallery {
@@ -18,6 +18,8 @@ export class GalleryComponent implements OnInit, OnDestroy {
   galleries: Gallery[] = [];
   currentIndex: number = 0;
 
+  @ViewChild('carousel') carouselDom!: ElementRef<HTMLDivElement>;
+
   private intervalId: any;
 
   constructor() {}
@@ -26,18 +28,11 @@ export class GalleryComponent implements OnInit, OnDestroy {
     this.galleries = [
       { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
       { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
-      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
-      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
-      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
-      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
-      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
-      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
-      { name: 'Artwork 1', imagePath: '../assets/Images/hydrangeas.jpg' },
-
+      { name: 'Artwork 3', imagePath: '../assets/Images/hydrangeas.jpg' },
       // Add more artworks as needed
     ];
 
-    this.intervalId = setInterval(() => this.moveCarousel(), 8000);
+    this.intervalId = setInterval(() => this.moveCarousel(), 3000);
   }
 
   ngOnDestroy(): void {
@@ -45,6 +40,16 @@ export class GalleryComponent implements OnInit, OnDestroy {
   }
 
   moveCarousel(): void {
-    this.currentIndex = (this.currentIndex + 3) % this.galleries.length;
+    this.currentIndex = (this.currentIndex + 1) % this.galleries.length;
+  }
+
+  @HostListener('mouseenter')
+  onMouseEnter(): void {
+    clearInterval(this.intervalId);
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave(): void {
+    this.intervalId = setInterval(() => this.moveCarousel(), 3000);
   }
 }

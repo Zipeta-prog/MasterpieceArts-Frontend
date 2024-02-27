@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<div class="header-section">
+<!-- <div class="header-section">
     <div class="header-text">
       <h1 class="display-1 display-font-weight-300">Find your Dream Art-Piece with the Best Deal Offers</h1>
       <p>Buying & Selling Made easy with access to full coverage from Art Dealers and Curators</p>
@@ -9,4 +9,88 @@
       </div>
     </div>
     <img src="../../../assets/Images/Rectangle.png" alt="Hero Image" class="hero-image img-fluid">
+</div> -->
+<div class="carousel">
+  <div class="list" #slider>
+    <div class="item">
+      <img src="../../../assets/Images/bentley.jpg" alt="art1">
+      <div class="content">
+        <div class="author">Bentley</div>
+        <div class="title">Art Slider</div>
+        <div class="topic">MasterPiece</div>
+        <div class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In totam animi ratione quisquam, veniam, sunt voluptates, a pariatur natus eligendi doloremque consectetur! Debitis expedita repudiandae aspernatur porro qui sequi modi?</div>
+        <div class="buttons">
+          <button>SEE MORE</button>
+          <button>BECOME A SELLER</button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/Images/hydrangeas.jpg" alt="art2">
+      <div class="content">
+        <div class="author">Bentley</div>
+        <div class="title">Art Slider</div>
+        <div class="topic">MasterPiece</div>
+        <div class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In totam animi ratione quisquam, veniam, sunt voluptates, a pariatur natus eligendi doloremque consectetur! Debitis expedita repudiandae aspernatur porro qui sequi modi?</div>
+        <div class="buttons">
+          <button>SEE MORE</button>
+          <button>BECOME A SELLER</button>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/Images/gallery.jpg" alt="art2">
+      <div class="content">
+        <div class="author">Bentley</div>
+        <div class="title">Art Slider</div>
+        <div class="topic">MasterPiece</div>
+        <div class="des">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In totam animi ratione quisquam, veniam, sunt voluptates, a pariatur natus eligendi doloremque consectetur! Debitis expedita repudiandae aspernatur porro qui sequi modi?</div>
+        <div class="buttons">
+          <button>SEE MORE</button>
+          <button>BECOME A SELLER</button>
+        </div>
+      </div>
+    </div>
+    <!-- Add similar structures for other items -->
+  </div>
+  <!-- list thumbnail -->
+  <div class="thumbnail" #thumbnailBorder>
+    <div class="item">
+      <img src="../../../assets/Images/bentley.jpg" alt="thumbnail1">
+      <div class="content">
+        <div class="title">Name Slider</div>
+        <div class="description">Description</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/Images/gallery.jpg" alt="thumbnail2">
+      <div class="content">
+        <div class="title">Name Slider</div>
+        <div class="description">Description</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/Images/hydrangeas.jpg" alt="thumbnail2">
+      <div class="content">
+        <div class="title">Name Slider</div>
+        <div class="description">Description</div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="../../../assets/Images/Rectangle.png" alt="thumbnail2">
+      <div class="content">
+        <div class="title">Name Slider</div>
+        <div class="description">Description</div>
+      </div>
+    </div>
+    <!-- Add similar structures for other thumbnail items -->
+  </div>
+  <!-- next prev -->
+  <div class="arrows">
+    <button id="prev" (click)="showSlider('prev')" #prev>&lt;</button>
+    <button id="next" (click)="showSlider('next')" #next>&gt;</button>
+  </div>
+  <!-- time running -->
+  <div class="time" #time></div>
 </div>
+
