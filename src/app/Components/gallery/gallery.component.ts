@@ -29,6 +29,12 @@ export class GalleryComponent implements OnInit, OnDestroy {
       { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
       { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
       { name: 'Artwork 3', imagePath: '../assets/Images/hydrangeas.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
+      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
+      { name: 'Artwork 3', imagePath: '../assets/Images/hydrangeas.jpg' },
+      { name: 'Artwork 1', imagePath: '../assets/Images/bentley.jpg' },
+      { name: 'Artwork 2', imagePath: '../assets/Images/gallery.jpg' },
+      { name: 'Artwork 3', imagePath: '../assets/Images/hydrangeas.jpg' },
       // Add more artworks as needed
     ];
 
@@ -40,7 +46,16 @@ export class GalleryComponent implements OnInit, OnDestroy {
   }
 
   moveCarousel(): void {
+    // Move to the next image
     this.currentIndex = (this.currentIndex + 1) % this.galleries.length;
+
+    // If it's the last image, reset the index to start from the first image
+    if (this.currentIndex === 0) {
+      clearInterval(this.intervalId); // Pause sliding temporarily when reaching the last image
+      setTimeout(() => {
+        this.intervalId = setInterval(() => this.moveCarousel(), 3000); // Resume sliding after a brief pause
+      }, 1000); // Pause for 1 second before resuming
+    }
   }
 
   @HostListener('mouseenter')
