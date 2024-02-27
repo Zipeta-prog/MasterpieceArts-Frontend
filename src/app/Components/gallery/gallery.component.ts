@@ -53,7 +53,7 @@ export class GalleryComponent implements OnInit, OnDestroy {
     if (this.currentIndex === 0) {
       clearInterval(this.intervalId); // Pause sliding temporarily when reaching the last image
       setTimeout(() => {
-        this.intervalId = setInterval(() => this.moveCarousel(), 3000); // Resume sliding after a brief pause
+        this.intervalId = setInterval(() => this.moveCarousel(), 2000); // Resume sliding after a brief pause
       }, 1000); // Pause for 1 second before resuming
     }
   }
@@ -65,6 +65,6 @@ export class GalleryComponent implements OnInit, OnDestroy {
 
   @HostListener('mouseleave')
   onMouseLeave(): void {
-    this.intervalId = setInterval(() => this.moveCarousel(), 3000);
+    this.intervalId = setInterval(() => this.moveCarousel(), 2000);
   }
 }

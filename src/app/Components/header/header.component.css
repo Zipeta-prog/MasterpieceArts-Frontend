@@ -16,7 +16,7 @@ header a{
 }
 /* carousel */
 .carousel{
-  height: 90vh;
+  height: 80vh;
   /* margin-bottom: -50px; */
   width: 100vw;
   overflow: hidden;
