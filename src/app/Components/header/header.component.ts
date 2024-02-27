@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
   @ViewChild('thumbnailBorder') thumbnailBorderDom!: ElementRef<HTMLDivElement>;
   @ViewChild('time') timeDom!: ElementRef<HTMLDivElement>;
 
-  timeRunning: number = 3000;
-  timeAutoNext: number = 7000;
+  timeRunning: number = 2000;
+  timeAutoNext: number = 3000;
 
   ngOnInit(): void {
     this.thumbnailBorderDom.nativeElement.appendChild(this.thumbnailItemsDom[0]);
